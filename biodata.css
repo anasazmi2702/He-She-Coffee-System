@@ -1,0 +1,112 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #ececec url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #8e5a43;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #8e5a43;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #6a4e3c;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f9f6f2;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #8e5a43;
+    outline: none;
+    box-shadow: 0 0 5px rgba(142, 90, 67, 0.5);
+}
+
+textarea {
+    resize: none;
+    height: 50px;
+}
+
+button {
+    background-color: #6a4e3c;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5b3d2e;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background: #8e5a43;
+    color: white;
+    position: relative;
+    bottom: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    form {
+        font-size: 14px;
+    }
+}

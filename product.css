@@ -1,0 +1,226 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #3e3e3e; /* Dark theme background */
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #f3a953;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    background-color: #f3a953;
+    color: black;
+}
+
+.logout-btn {
+    background-color: #f3a953;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #d68440;
+    color: white;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-btn {
+    cursor: pointer;
+    font-weight: bold;
+    color: #f3a953; /* Highlight the Admin label */
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    list-style: none;
+    min-width: 150px;
+}
+
+.dropdown .dropdown-content li {
+    text-align: center;
+}
+
+.dropdown .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown .dropdown-content a:hover {
+    background-color: #f3a953;
+    color: black;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Product Section */
+.product-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.product-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f3a953; /* Matches theme */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 30px;
+    margin-top: 20px;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column; /* Ensures button stays at the bottom */
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent cards */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #f3a953; /* Matches theme */
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.price {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #f3a953;
+}
+
+.order-btn {
+    background-color: #f3a953;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.order-btn:hover {
+    background-color: #d68440;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 card per row */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}

@@ -1,0 +1,272 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #3e3e3e; /* Dark background */
+    color: #f5f5f5; /* Light text */
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #000; /* Solid black for navbar */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #f3a953; /* Gold color for logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #f3a953; /* Highlight gold */
+    color: black;
+}
+
+.logout-btn {
+    background-color: #f3a953;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #d68440;
+    color: white;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-btn {
+    cursor: pointer;
+    font-weight: bold;
+    color: #f3a953; /* Highlight the Admin label */
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    list-style: none;
+    min-width: 150px;
+}
+
+.dropdown .dropdown-content li {
+    text-align: center;
+}
+
+.dropdown .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown .dropdown-content a:hover {
+    background-color: #f3a953;
+    color: black;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #f3a953;
+    margin: 20px 0;
+}
+
+/* Menu Button */
+.menu-button {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #f3a953;
+    color: black;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #d68440; /* Darker gold */
+    color: white;
+}
+
+/* Search Container */
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #f5f5f5;
+    width: 300px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #f3a953;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #d68440;
+    color: white;
+}
+
+/* Summary */
+.summary {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* Table Styling */
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #f5f5f5;
+}
+
+table, th, td {
+    border: 1px solid #555;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    font-size: 1em;
+}
+
+th {
+    background-color: #f3a953;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #444; /* Darker for even rows */
+}
+
+tr:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+/* Dropdown Styling for Order Status */
+table select {
+    background-color: #444;
+    color: #f5f5f5;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+table select:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+/* Delete Button Styling */
+table button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+table button[type="submit"]:hover {
+    background-color: #cc0000;
+}
+
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}

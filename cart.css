@@ -1,0 +1,257 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #3e3e3e; /* Dark theme background */
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #f3a953;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    background-color: #f3a953;
+    color: black;
+}
+
+.logout-btn {
+    background-color: #f3a953;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #d68440;
+    color: white;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-btn {
+    cursor: pointer;
+    font-weight: bold;
+    color: #f3a953; /* Highlight the Admin label */
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    list-style: none;
+    min-width: 150px;
+}
+
+.dropdown .dropdown-content li {
+    text-align: center;
+}
+
+.dropdown .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown .dropdown-content a:hover {
+    background-color: #f3a953;
+    color: black;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Content Wrapper to Push Footer to Bottom */
+.content-wrapper {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Cart Container */
+.cart-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+h1 {
+    color: #f3a953; /* Gold theme color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #555;
+}
+
+table th {
+    background-color: #f3a953;
+    color: black;
+}
+
+table td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Input Fields in Table */
+table input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Buttons */
+button, .checkout-link, .continue-shopping {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-align: center;
+    border: none;
+    background-color: #FFFDD0; /* white theme color */
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .checkout-link:hover, .continue-shopping:hover {
+    background-color: #f3a953; /* Dark Gold */
+    color: white;
+}
+
+.delete-button {
+    color: #d9534f; /* Soft red */
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.delete-button:hover {
+    color: #ff6f61; /* Bright red */
+    text-decoration: underline;
+}
+
+/* Cart Summary Section */
+.cart-summary {
+    margin-top: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.cart-summary p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #f5f5f5;
+}
+
+.cart-summary p span {
+    font-weight: bold;
+    color: #f3a953; /* Gold theme color */
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-container {
+        padding: 15px;
+    }
+
+    table input[type="number"] {
+        width: 50px;
+    }
+
+    button, .checkout-link, .continue-shopping {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}

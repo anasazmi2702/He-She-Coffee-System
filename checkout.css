@@ -1,0 +1,129 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f3eac2; /* Warm coffee background */
+    color: #4a342e; /* Coffee brown text */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Container */
+.checkout-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c2a58d;
+}
+
+/* Header */
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #4a342e;
+}
+
+h2 {
+    margin: 20px 0 10px;
+    font-size: 22px;
+    color: #4a342e;
+}
+
+/* Total Price Display */
+.total-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #8b5e3c;
+}
+
+/* Payment Options */
+.payment-options {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.payment-options label {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.payment-options input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Delivery Information */
+.delivery-info {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.delivery-info label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #4a342e;
+}
+
+.delivery-info input[type="text"],
+.delivery-info textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    color: #4a342e;
+}
+
+.delivery-info textarea {
+    resize: none;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #8b5e3c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6d432a;
+}
+
+/* Back to Cart Link */
+.back-to-cart {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #8b5e3c;
+    font-weight: bold;
+}
+
+.back-to-cart:hover {
+    color: #4a342e;
+}
